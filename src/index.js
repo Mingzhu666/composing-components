@@ -1,12 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+import Comment from './components/Comment/Comment';
+
+const comment = {
+  date: new Date(),
+  text: 'I love you!',
+  author: {
+    name: 'Mingzhu',
+    avatarUrl: 'https://placekitten.com/g/64/64',
+  },
+};
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Comment 
+      author={comment.author} 
+      text={comment.text} 
+      date={comment.date} 
+    />
   </React.StrictMode>,
   document.getElementById('root')
 );
